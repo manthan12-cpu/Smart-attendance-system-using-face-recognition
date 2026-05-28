@@ -1,3 +1,8 @@
+<img width="1600" height="812" alt="image" src="https://github.com/user-attachments/assets/38633c43-8932-4cb8-a48a-a0737c16c248" />
+<img width="1600" height="813" alt="image1" src="https://github.com/user-attachments/assets/be1bc449-be23-4be7-b237-78aa9ff0eb42" />
+<img width="1600" height="803" alt="image 3" src="https://github.com/user-attachments/assets/5939b711-b4e4-40b5-93c7-b875197c6ffb" />
+<img width="1600" height="812" alt="image 4" src="https://github.com/user-attachments/assets/05658b89-6121-4cd2-b987-f6a45774aa21" />
+
 # SmartAttendance AI Face Recognition Attendance System
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue) ![OpenCV](https://img.shields.io/badge/OpenCV-4.8-green) ![Flask](https://img.shields.io/badge/Flask-2.3-lightgrey) ![License](https://img.shields.io/badge/License-MIT-brightgreen)
