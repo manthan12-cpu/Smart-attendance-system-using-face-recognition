@@ -1,0 +1,264 @@
+{
+  "attendance_logs": [
+    {
+      "Field": "log_id",
+      "Type": "int",
+      "Null": "NO",
+      "Key": "PRI",
+      "Default": null,
+      "Extra": "auto_increment"
+    },
+    {
+      "Field": "session_id",
+      "Type": "int",
+      "Null": "NO",
+      "Key": "MUL",
+      "Default": null,
+      "Extra": ""
+    },
+    {
+      "Field": "student_id",
+      "Type": "int",
+      "Null": "NO",
+      "Key": "MUL",
+      "Default": null,
+      "Extra": ""
+    },
+    {
+      "Field": "status",
+      "Type": "enum('Present','Late','Absent','EarlyExit')",
+      "Null": "YES",
+      "Key": "",
+      "Default": "Present",
+      "Extra": ""
+    }
+  ],
+  "attendance_slot_logs": [
+    {
+      "Field": "session_id",
+      "Type": "int",
+      "Null": "NO",
+      "Key": "PRI",
+      "Default": null,
+      "Extra": ""
+    },
+    {
+      "Field": "student_id",
+      "Type": "int",
+      "Null": "NO",
+      "Key": "PRI",
+      "Default": null,
+      "Extra": ""
+    },
+    {
+      "Field": "slot_number",
+      "Type": "int",
+      "Null": "NO",
+      "Key": "PRI",
+      "Default": null,
+      "Extra": ""
+    },
+    {
+      "Field": "detected",
+      "Type": "tinyint(1)",
+      "Null": "YES",
+      "Key": "",
+      "Default": "1",
+      "Extra": ""
+    }
+  ],
+  "enrollments": [
+    {
+      "Field": "enrollment_id",
+      "Type": "int",
+      "Null": "NO",
+      "Key": "PRI",
+      "Default": null,
+      "Extra": "auto_increment"
+    },
+    {
+      "Field": "student_id",
+      "Type": "int",
+      "Null": "NO",
+      "Key": "MUL",
+      "Default": null,
+      "Extra": ""
+    },
+    {
+      "Field": "subject_id",
+      "Type": "int",
+      "Null": "NO",
+      "Key": "MUL",
+      "Default": null,
+      "Extra": ""
+    }
+  ],
+  "lecture_sessions": [
+    {
+      "Field": "session_id",
+      "Type": "int",
+      "Null": "NO",
+      "Key": "PRI",
+      "Default": null,
+      "Extra": "auto_increment"
+    },
+    {
+      "Field": "subject_id",
+      "Type": "int",
+      "Null": "NO",
+      "Key": "MUL",
+      "Default": null,
+      "Extra": ""
+    },
+    {
+      "Field": "session_date",
+      "Type": "date",
+      "Null": "NO",
+      "Key": "",
+      "Default": null,
+      "Extra": ""
+    },
+    {
+      "Field": "start_time",
+      "Type": "time",
+      "Null": "NO",
+      "Key": "",
+      "Default": null,
+      "Extra": ""
+    },
+    {
+      "Field": "end_time",
+      "Type": "time",
+      "Null": "YES",
+      "Key": "",
+      "Default": null,
+      "Extra": ""
+    }
+  ],
+  "professors": [
+    {
+      "Field": "professor_id",
+      "Type": "int",
+      "Null": "NO",
+      "Key": "PRI",
+      "Default": null,
+      "Extra": "auto_increment"
+    },
+    {
+      "Field": "full_name",
+      "Type": "varchar(100)",
+      "Null": "NO",
+      "Key": "",
+      "Default": null,
+      "Extra": ""
+    },
+    {
+      "Field": "email",
+      "Type": "varchar(100)",
+      "Null": "YES",
+      "Key": "UNI",
+      "Default": null,
+      "Extra": ""
+    }
+  ],
+  "students": [
+    {
+      "Field": "student_id",
+      "Type": "int",
+      "Null": "NO",
+      "Key": "PRI",
+      "Default": null,
+      "Extra": "auto_increment"
+    },
+    {
+      "Field": "full_name",
+      "Type": "varchar(100)",
+      "Null": "NO",
+      "Key": "",
+      "Default": null,
+      "Extra": ""
+    },
+    {
+      "Field": "roll_number",
+      "Type": "varchar(50)",
+      "Null": "NO",
+      "Key": "UNI",
+      "Default": null,
+      "Extra": ""
+    },
+    {
+      "Field": "email",
+      "Type": "varchar(100)",
+      "Null": "YES",
+      "Key": "",
+      "Default": null,
+      "Extra": ""
+    },
+    {
+      "Field": "phone",
+      "Type": "varchar(15)",
+      "Null": "YES",
+      "Key": "",
+      "Default": null,
+      "Extra": ""
+    },
+    {
+      "Field": "department",
+      "Type": "varchar(100)",
+      "Null": "YES",
+      "Key": "",
+      "Default": null,
+      "Extra": ""
+    },
+    {
+      "Field": "year",
+      "Type": "int",
+      "Null": "YES",
+      "Key": "",
+      "Default": null,
+      "Extra": ""
+    },
+    {
+      "Field": "image_path",
+      "Type": "varchar(255)",
+      "Null": "YES",
+      "Key": "",
+      "Default": null,
+      "Extra": ""
+    },
+    {
+      "Field": "face_encoding",
+      "Type": "longblob",
+      "Null": "YES",
+      "Key": "",
+      "Default": null,
+      "Extra": ""
+    }
+  ],
+  "subjects": [
+    {
+      "Field": "subject_id",
+      "Type": "int",
+      "Null": "NO",
+      "Key": "PRI",
+      "Default": null,
+      "Extra": "auto_increment"
+    },
+    {
+      "Field": "subject_name",
+      "Type": "varchar(100)",
+      "Null": "NO",
+      "Key": "",
+      "Default": null,
+      "Extra": ""
+    },
+    {
+      "Field": "professor_id",
+      "Type": "int",
+      "Null": "YES",
+      "Key": "MUL",
+      "Default": null,
+      "Extra": ""
+    }
+  ]
+}

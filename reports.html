@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Attendance - Reports</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body data-page="reports">
+    <div class="app-container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <h2>SmartBoard</h2>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="index.html" class="nav-item">
+                    <i class="ri-home-4-fill"></i><span>Dashboard</span>
+                </a>
+                <a href="attendance.html" class="nav-item">
+                    <i class="ri-briefcase-4-fill"></i><span>Attendance</span>
+                </a>
+                <a href="reports.html" class="nav-item active">
+                    <i class="ri-bar-chart-fill"></i><span>Reports</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="nav-item user-profile-btn">
+                    <i class="ri-user-fill"></i>
+                    <span>User Profile</span>
+                </button>
+                <button class="nav-item" id="logout-btn">
+                    <i class="ri-logout-box-r-line"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content bg-grid" id="main-content-area">
+            <div id="view-container" class="view-container">
+                <!-- Content injected here by JS -->
+            </div>
+        </main>
+
+        <!-- Right Panel Container -->
+        <aside class="right-panel" id="right-panel">
+            <div class="right-panel-header" style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 24px;">
+                 <div class="user-greeting">
+                     <h3 style="font-size: 18px; font-weight: 800; color: var(--text-primary); margin-bottom: 4px;" id="sidebar-user-name">Welcome</h3>
+                     <p style="font-size: 13px; color: var(--text-secondary); font-weight: 600;" id="sidebar-user-role">Professor</p>
+                 </div>
+                 <div class="right-top-icons" style="display: flex; gap: 8px;">
+                     <button class="icon-btn" id="theme-toggle"><i class="ri-contrast-2-fill" id="theme-icon"></i></button>
+                     <button class="icon-btn" class="user-profile-btn"><i class="ri-user-smile-fill"></i></button>
+                 </div>
+            </div>
+
+            <div class="widget clock-widget" style="padding: 24px; border-radius: 20px; background: var(--bg-white); box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; flex-direction: column; align-items: center; justify-content: center; display: flex;">
+                <h3 class="time-display" id="realtime-clock" style="font-size: 32px; font-weight: 800; color: var(--text-primary); margin-bottom: 4px;">00:00 AM</h3>
+                <h2 id="realtime-date-lg" style="font-size: 15px; font-weight: 600; color: var(--text-secondary); margin-top: 0;">Monday, 2nd August 2023</h2>
+            </div>
+
+            <!-- Activity Logs -->
+            <div class="widget activity-widget">
+                <h4>Recent Activities</h4>
+                <p class="activity-subtitle">Last 3 hours ago</p>
+                <div class="activity-timeline" id="activity-log"></div>
+            </div>
+
+            <!-- Calendar Widget -->
+            <div class="widget calendar-widget">
+                <div class="calendar-header">
+                    <h4>Calendar</h4>
+                    <span class="cal-month-year">August 2023</span>
+                    <div class="cal-nav">
+                        <i class="ri-arrow-left-s-line"></i>
+                        <i class="ri-arrow-right-s-line"></i>
+                    </div>
+                </div>
+                <div class="calendar-grid mock-calendar">
+                    <div class="cal-days">
+                        <span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span>
+                    </div>
+                    <div class="cal-dates"></div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <script type="module" src="./js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+Subject Counts:
+[{'subject_id': 7, 'c': 5}, {'subject_id': 8, 'c': 5}, {'subject_id': 11, 'c': 5}, {'subject_id': 12, 'c': 5}]
+All Enrollments:
+Subject 7: 201 - Arjun Kapoor
+Subject 7: 202 - Neha Sharma
+Subject 7: 203 - Rohan Das
+Subject 7: 204 - Priya Singh
+Subject 7: 205 - Amit Patel
+Subject 8: 301 - Rahul Verma
+Subject 8: 302 - Sneha Gupta
+Subject 8: 303 - Vivek Kumar
+Subject 8: 304 - Pooja Yadav
+Subject 8: 305 - Karan Raj
+Subject 11: 301 - Rahul Verma
+Subject 11: 302 - Sneha Gupta
+Subject 11: 303 - Vivek Kumar
+Subject 11: 304 - Pooja Yadav
+Subject 11: 305 - Karan Raj
+Subject 12: 301 - Rahul Verma
+Subject 12: 302 - Sneha Gupta
+Subject 12: 303 - Vivek Kumar
+Subject 12: 304 - Pooja Yadav
+Subject 12: 305 - Karan Raj

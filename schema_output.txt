@@ -1,0 +1,6 @@
+professors: ['professor_id', 'full_name', 'email']
+subjects: ['subject_id', 'subject_name', 'professor_id']
+students: ['student_id', 'full_name', 'roll_number', 'email', 'phone', 'department', 'year', 'image_path', 'face_encoding']
+enrollments: ['enrollment_id', 'student_id', 'subject_id']
+lecture_sessions: ['session_id', 'subject_id', 'session_date', 'start_time', 'end_time']
+attendance_logs: ['log_id', 'session_id', 'student_id', 'status']

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Attendance - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body data-page="dashboard">
+    <div class="app-container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <h2>SmartBoard</h2>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="index.html" class="nav-item active">
+                    <i class="ri-home-4-fill"></i><span>Dashboard</span>
+                </a>
+                <a href="attendance.html" class="nav-item">
+                    <i class="ri-survey-fill"></i><span>Attendance</span>
+                </a>
+                <a href="reports.html" class="nav-item">
+                    <i class="ri-bar-chart-fill"></i><span>Reports</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="nav-item user-profile-btn">
+                    <i class="ri-user-fill"></i>
+                    <span>User Profile</span>
+                </button>
+                <button class="nav-item" id="logout-btn">
+                    <i class="ri-logout-box-r-line"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content bg-grid" id="main-content-area">
+            <div class="view-container" id="view-container">
+                <div class="dashboard-root">
+                    <h2 class="page-title-center">Smart Attendance Dashboard</h2>
+
+                    <div class="dashboard-main-block">
+                        <div class="stats-cards-wrapper">
+                            <div class="stat-card bg-gradient-pink">
+                                <span style="font-weight: 700; font-size: 14px;">Total Students</span>
+                                <h2 style="font-size: 32px; font-weight: 800;" id="stat-total-students">...</h2>
+                            </div>
+                            <div class="stat-card bg-gradient-orange">
+                                <span style="font-weight: 700; font-size: 14px;">Subjects</span>
+                                <h2 style="font-size: 32px; font-weight: 800;" id="stat-total-subjects">...</h2>
+                            </div>
+                            <div class="stat-card bg-gradient-peach">
+                                <span style="font-weight: 700; font-size: 14px;">Sessions Today</span>
+                                <h2 style="font-size: 32px; font-weight: 800;" id="session-count">...</h2>
+                            </div>
+                        </div>
+
+                        <div class="subject-select-row">
+                            <label>Select Subject:</label>
+                            <select id="dash-subject">
+                                <option>Database Management Systems</option>
+                                <option>Algorithms</option>
+                                <option>Operating Systems</option>
+                            </select>
+                        </div>
+
+                        <div class="action-buttons-wrap">
+                            <div class="action-buttons-row">
+                                <button class="btn-pill btn-red" id="btn-d-start">Start Session</button>
+                                <button class="btn-pill btn-blue" id="btn-d-end">End Session</button>
+                                <button class="btn-pill btn-green" id="btn-d-rep">Generate Report</button>
+                            </div>
+                            <div class="action-buttons-row">
+                                <button class="btn-pill btn-red" id="btn-d-att"
+                                    onclick="window.location.href='attendance.html'">Take Attendance</button>
+                                <button class="btn-pill btn-blue" id="btn-d-vrep"
+                                    onclick="window.location.href='reports.html'">View Reports</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-box">
+                        <h3>Class Schedule</h3>
+                        <div class="timeline-list">
+
+                            <div class="timeline-item-dash">
+                                <div class="tl-time">9:00 AM</div>
+                                <div class="tl-line-node">
+                                    <div class="tl-dot-circ"></div>
+                                    <div class="tl-line-vert"></div>
+                                </div>
+                                <div class="tl-content-card">
+                                    <div class="tl-header-row">
+                                        <div class="tl-icon-sq"><i class="ri-code-s-slash-line"></i></div>
+                                        <span>9:00 AM - C Programming</span>
+                                    </div>
+                                    <div class="tl-bar-track">
+                                        <div class="tl-bar-fill" style="width: 100%; background: #94c5b8;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item-dash">
+                                <div class="tl-time">11:00 AM</div>
+                                <div class="tl-line-node">
+                                    <div class="tl-dot-circ"></div>
+                                    <div class="tl-line-vert"></div>
+                                </div>
+                                <div class="tl-content-card">
+                                    <div class="tl-header-row">
+                                        <div class="tl-icon-sq"><i class="ri-node-tree"></i></div>
+                                        <span>11:00 AM - Data Structures and Algorithms</span>
+                                    </div>
+                                    <div class="tl-bar-track">
+                                        <div class="tl-bar-fill" style="width: 75%; background: #d09c95;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item-dash">
+                                <div class="tl-time">1:00 PM</div>
+                                <div class="tl-line-node">
+                                    <div class="tl-dot-circ"></div>
+                                    <div class="tl-line-vert"></div>
+                                </div>
+                                <div class="tl-content-card">
+                                    <div class="tl-header-row">
+                                        <div class="tl-icon-sq"><i class="ri-server-line"></i></div>
+                                        <span>1:00 PM - Database Management Systems (DBMS)</span>
+                                    </div>
+                                    <div class="tl-bar-track">
+                                        <div class="tl-bar-fill" style="width: 60%; background: #a4d4d6;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item-dash">
+                                <div class="tl-time">3:00 PM</div>
+                                <div class="tl-line-node">
+                                    <div class="tl-dot-circ"></div>
+                                </div>
+                                <div class="tl-content-card">
+                                    <div class="tl-header-row">
+                                        <div class="tl-icon-sq"><i class="ri-brain-line"></i></div>
+                                        <span>3:00 PM - Machine Learning</span>
+                                    </div>
+                                    <div class="tl-bar-track">
+                                        <div class="tl-bar-fill" style="width: 40%; background: #c4a8d4;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Panel Container -->
+        <aside class="right-panel" id="right-panel">
+            <div class="right-panel-controls">
+                <div class="right-top-icons">
+                    <button class="icon-btn"><i class="ri-user-smile-fill"></i></button>
+                    <button class="icon-btn" id="theme-toggle"><i class="ri-contrast-2-fill"
+                            id="theme-icon"></i></button>
+                </div>
+            </div>
+
+            <div class="widget clock-widget">
+                <div class="clock-icon"><i class="ri-sun-fill"></i></div>
+                <div class="clock-details">
+                    <h3 class="time-display" id="realtime-clock">00:00:00 AM</h3>
+                    <p class="realtime-label">Real-time insight</p>
+                </div>
+                <div class="clock-today-date">
+                    <p>Today:</p>
+                    <h2 id="realtime-date-lg">2nd August<br>2023</h2>
+                </div>
+            </div>
+
+            <div class="widget activity-widget">
+                <h4>Recent Activities</h4>
+                <p class="activity-subtitle">Last 3 hours ago</p>
+                <div class="activity-timeline" id="activity-log"></div>
+            </div>
+
+            <div class="widget calendar-widget">
+                <div class="calendar-header">
+                    <h4>Calendar</h4>
+                    <span class="cal-month-year">August 2023</span>
+                    <div class="cal-nav">
+                        <i class="ri-arrow-left-s-line"></i>
+                        <i class="ri-arrow-right-s-line"></i>
+                    </div>
+                </div>
+                <div class="calendar-grid mock-calendar">
+                    <div class="cal-days">
+                        <span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span>
+                    </div>
+                    <div class="cal-dates"></div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <script type="module" src="./js/app.js"></script>
+</body>
+
+</html>

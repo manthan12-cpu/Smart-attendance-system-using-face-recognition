@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professor Login - Smart Attendance</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body data-page="login">
+    <div class="login-page">
+        <button class="icon-btn theme-toggle-login" id="theme-toggle">
+            <i class="ri-moon-line"></i>
+        </button>
+
+        <div class="login-card">
+            <div class="login-header">
+                <h1>Welcome Back</h1>
+                <p>Please enter your credentials to access the Portal.</p>
+            </div>
+
+            <form id="login-form">
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="email" placeholder="professor@university.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="password" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="login-btn" id="login-submit-btn">
+                    Login to Dashboard
+                </button>
+            </form>
+            
+            <p id="error-message" style="color: #ff8b8b; font-size: 13px; margin-top: 15px; display: none;"></p>
+        </div>
+    </div>
+
+    <script type="module" src="js/pages/login.js"></script>
+</body>
+</html>
