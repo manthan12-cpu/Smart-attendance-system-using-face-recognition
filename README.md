@@ -1,15 +1,15 @@
-# SmartAttend — AI Face Recognition Attendance System
+# SmartAttendance AI Face Recognition Attendance System
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue) ![OpenCV](https://img.shields.io/badge/OpenCV-4.8-green) ![Flask](https://img.shields.io/badge/Flask-2.3-lightgrey) ![License](https://img.shields.io/badge/License-MIT-brightgreen)
 
-SmartAttend is a real-time face recognition attendance system for colleges and corporates. It detects faces via webcam, verifies liveness through blink detection, and marks attendance automatically — no hardware required.
+SmartAttend is a real-time face recognition attendance system for colleges and corporates. It detects faces via webcam, verifies liveness through blink detection, and marks attendance automatically no hardware required.
 
 ---
 
 ## Features
 - Real-time face recognition via standard webcam (no special hardware)
 - Liveness detection using Eye Aspect Ratio (EAR) blink verification
-- Session-scoped enrollment — only registered students recognized
+- Session-scoped enrollment only registered students recognized
 - Web dashboard with List View, Grid View, and Reports
 - Encoding cache for instant startup after first run
 - MJPEG live stream embedded in browser via Flask
@@ -56,7 +56,7 @@ SmartAttend/
 
 
 ## My Role
-I built the camera and recognition engine (`face_recognition_service.py`) — MJPEG streaming, face encoding pipeline, liveness detection, encoding cache, and session-scoped recognition.
+I built the camera and recognition engine (`face_recognition_service.py`) MJPEG streaming, face encoding pipeline, liveness detection, encoding cache, and session-scoped recognition.
 
 ## Authors
 - **Manthan Masurkar** — Camera & recognition engine
